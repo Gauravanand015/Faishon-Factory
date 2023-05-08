@@ -1,0 +1,81 @@
+#description_container .card {
+    display: flex;
+    margin-top: 22px;
+    margin-left: 15px;
+}
+.left-image img{
+border: 2px solid blue;
+width: 150px;
+height: 150px;
+
+}
+.images img {
+    border: 2px solid blue;
+    width: 20vw;
+    height: 24vw;
+    image-resolution:inherit ;
+    padding: 18px;
+}
+
+.name{
+    
+    color: rgb(153, 153, 153);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    font-family: "Mier book";
+    margin: 0px;
+    padding: 0px;
+    margin: 10px 10px;
+    letter-spacing: 1px;
+}
+
+.cost{
+    color: rgb(51, 51, 51);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 19px;
+    line-height: 25px;
+    font-family: "Mier bold";
+    margin: 0px;
+    padding: 0px;
+    margin: 10px 10px;
+}
+
+.deli{
+   
+    font-size: x-small;
+    letter-spacing:1.5px;
+    margin: 10px 10px;
+}
+
+.rat{
+ /* border: 2px solid rgb(72, 113, 72); */
+ width: 55px;
+ text-align: center;
+ border-radius: 10px;
+ display: inline-flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    background: rgb(0, 126, 67);
+    fill: rgb(255, 255, 255);
+    color: whitesmoke;
+    font-weight: 600;
+    margin: 10px 10px;
+    padding: 3px;
+}
+
+.fa-star{
+    /* border: 2px solid red; */
+    color: white;
+}
+
+.sub{
+    border: 1px solid #f43397;
+    margin: auto;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}

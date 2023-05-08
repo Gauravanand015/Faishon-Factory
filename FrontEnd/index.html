@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fashionfactory</title>
+    <link rel="icon" type="image/x-icon" href="./image/Butterfly.png">
+    <script src="https://kit.fontawesome.com/05fc89279a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./CSS/index.css">
+</head>
+
+<body>
+
+    <section class="navbar">
+        <div class="uppernav">
+            <a href="./index.html"><img src="./image/Logo-1.png"
+                    alt="logo" class="logo" /></a>
+            <div class="navSearch">
+                 <img src="https://i.postimg.cc/90c6jfMm/search-interface-symbol.png" alt="search"
+                    class="NavSearchIcon" />
+                <!-- <input type="text" id="keyword" class="searchContainer"
+                    placeholder="Try Saree,Kurthi or Seach by Product Code" onkeypress="handleKeyPress(event)" />  -->
+                    
+                    <input id="search" class="searchContainer" oninput="search()" type="text" placeholder="Try Saree,Kurthi or Seach by Product Code">
+
+            </div>
+            <div class="navRightSec">
+                <div class="navAppPromo">
+                    <img src="https://i.postimg.cc/sXqr2Fz4/smartphone.png" alt="app" class="navAppIcon" />
+                    <span id="tagDwn">Download App</span>
+                </div>
+                <a href="../FrontEnd/adminSign.html"><span class="navSuplier">Admin</span></a>
+                <div class="navProfile" onclick="window.location.href='signin.html'">
+                    <img src="https://i.postimg.cc/wjtLkcVz/user.png" alt="account" class="navAccountIcon" />
+                    <span class="SignUpHover">Profile</span>
+                </div>
+                <div class="navcart" onclick="window.location.href='CartPage.html'">
+                    <img src="https://i.postimg.cc/sXBgkwMf/bag.png" alt="cart" class="cartIcon" />
+                    <span class="SignUpHover" onclick="window.location.href='CartPage.html'">Cart</span>
+                </div>
+                <!-- <div id="cart-item-counter">0</div> -->
+            </div>
+        </div>
+        <div class="bottomNav">
+            <div class="nav-menu">
+                <ul>
+                    <li class="dropdown" onclick="window.location.href='viewall.html'">View All</li>
+                    <li class="dropdown" onclick="window.location.href='WomenWestern.html'">Women Western
+                        <div class="submenu">
+                            <div class="subCat">
+                                <span class="catHeading">Topwear</span>
+                                <span>Dresses</span>
+                                <span>Tops</span>
+                                <span>Sweaters</span>
+                                <span>Jumpsuits</span>
+                            </div>
+                            <div class="subCat" style="margin-left: 1em;">
+                                <span class="catHeading">Bottomwear</span>
+                                <span>Jeans</span>
+                                <span>Jeggings</span>
+                                <span>Palazzos</span>
+                                <span>Shorts</span>
+                                <span>Skirts</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li onclick="window.location.href='Jewellery.html'">Jewellery & Accessories</li>
+                    <li onclick="window.location.href='Men.html'">Men</li>
+                    <li>Beauty & Health</li>
+                    <li>Bath & Body</li>
+                    <li>Bags & Footwear</li>
+                    <li>Home & Kitchen</li>
+                    <li>Kids</li>
+                    <li>Electronics</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <div class="banner">
+        <a href="#"><img src="./image/banner-1.png" alt=""></a>
+    </div>
+
+    <h1 style="margin-bottom: 20px;" class="heading-2"><span>Top Categories to choose from</span>
+    </h1>
+    <div class="banner">
+        <a href="#"><img src="./image/banner-2.png" alt=""></a>
+    </div>
+
+    <div class="banner">
+        <a href="#"><img src="./image/banner-3.png" alt=""></a>
+    </div>
+
+    <div class="banner">
+        <a href="#"><img src="./image/banner-4.png" alt=""></a>
+    </div>
+
+    <div class="banner">
+        <a href="#"><img src="./image/banner-5.png" alt=""></a>
+    </div>
+
+
+    <center>
+        <h1 style="margin-bottom: 40px;" class="heading-3"> <span> Products For You</span></h1>
+        <div class="container">
+            <p>
+
+            </p>
+        </div>
+    </center>
+
+    <div id="sidebar_content">
+        <div class="nav">
+            <label for="Sort"> Sort By : </label>
+            <select name="Sort By" id="sort" onchange="sort()">
+                <option value="LTH">Low To High</option>
+                <option value="HTL">High To Low</option>
+            </select>
+            <a href="#">
+                <h3 class="gender">Gender</h3>
+            </a>
+            <div class="input">
+                <input type="checkbox" id="men" name="Men">
+                <label for="men"> Men</label><br>
+                <input type="checkbox" id="women" name="Women">
+                <label for="women"> Women</label><br>
+                <input type="checkbox" name="Kids" id="kids">
+                <label for="kids"> Kids </label><br>
+            </div>
+            <a href="#">
+                <h3 class="gender">Category</h3>
+            </a>
+            <div class="input">
+                <input type="checkbox" id="Tshirt" name="Men">
+                <label for="men"> Tshirts</label><br>
+                <input type="checkbox" id="kurtis" name="Women">
+                <label for="women"> Kurtis</label><br>
+                <input type="checkbox" name="Kids" id="Sarees">
+                <label for="kids"> Sarees </label><br>
+                <input type="checkbox" name="Kids" id="Pant">
+                <label for="kids"> Pants </label><br>
+                <input type="checkbox" name="Kids" id="Shoes">
+                <label for="kids"> Shoes </label><br>
+            </div>
+            <a href="#">Contact us</a>
+            <a href="#">About us</a>
+        </div>
+
+        <div id="content">
+            <div class="card-list"></div>
+        </div>
+    </div>
+
+
+    <!-- ++++++++++++++++ Foooterrrrrr ++++++++++++++++ -->
+    <hr>
+
+    <div id="footer">
+        <div class="block-1">
+            <h2>Shop Non-Stop on Meesho</h2> <br>
+            <p>Trusted by more than 1 Crore Indians <br>
+                Cash on Delivery | Free Delivery</p>
+            <img class="playstore" src="./image/playstore.png" alt="">
+        </div>
+        <div class="block-2">
+            <a href="#">
+                <h5>Career</h5>
+            </a>
+            <a href="#">
+                <h5>Become a supplier</h5>
+            </a>
+            <a href="#">
+                <h5>Hall of Fame</h5>
+            </a>
+        </div>
+        <div class="block-3">
+            <a href="#">
+                <h5>FF Tech Blog</h5>
+            </a>
+            <a href="#">
+                <h5>Notices and Returns</h5>
+            </a>
+        </div>
+        <div class="block-4">
+            <h4>Reach Us Out</h4>
+        </div>
+        <div class="block-5">
+            <h4>Contacts</h4>
+            <p class="para">ashnear Technologies Private Limited,<br>
+                CIN: U74900KA2015PTC082263 <br>
+                06-105-B, 06-102, (138 Wu) <br> Vaishnavi Signature, No. 78/9,<br> Outer Ring Road, Bellandur,<br>
+                Varthur Hobli, Bengaluru-560103,<br> Karnataka, India <br>
+                E-mail address: query@ff.com <br>
+                © 2015-2022 fashionfactory.com</p>
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+<script src="./JS/index.js"></script>
