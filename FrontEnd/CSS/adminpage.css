@@ -133,3 +133,20 @@
     padding: 3px; 
 } 
 
+#content{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    margin: auto;
+}
+
+#allInput{
+    border: 2px solid red;
+    width: 25%;
+    margin: auto;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+#form input{
+margin-bottom: 20px;
+}

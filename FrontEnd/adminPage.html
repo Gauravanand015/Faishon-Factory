@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>fashionfactory</title>
-	<link rel="stylesheet" type="text/css" href="../FrontEnd/CSS/adminpage.css" />
+	<link rel="stylesheet" type="text/css" href="./CSS/adminpage.css" />
 </head>
 
 <body>
     <div id="navBar">
         
-        <div class="image"><img style=" width:100% ;padding-top: 5px"  src="../image/Logo-1.png" alt=""></div>
+        <div class="image"><img style=" width:100% ;padding-top: 5px"  src="./image/Logo-1.png" alt=""></div>
         <div id="left_section">
             <div class="left">
                 <a href="#"><h3> All Product</h3></a>
@@ -43,8 +43,30 @@
     
 
     <h1 id="mh">Manage  All Product</h1>
-    <div id="main"></div>
-    <div id="content"> </div>
+    <div id="main">
+        <div id="allInput"> <h3>Add Products</h3>
+            <form action="#" id="form">
+                <input style="border: 1px solid black;" type="file" id="fileUpload" placeholder="upload file" required>
+                <label for="fileUpload">Upload File</label>
+                <br>
+                <input type="text" id="product_title" placeholder="enter title name" required>
+                <label for="product_title">Product Name</label>
+                <br>
+                <input type="text" id="product_price" placeholder="enter price" required>
+                <label for="product_price">Product Price</label>
+                <br>
+                <input type="text" id="product_rating" placeholder="enter rating" required>
+                <label for="product_rating">Product Rating</label>
+                <br>
+                <input type="text" id="product_delivery" placeholder="enter delivery" required>
+                <label for="product_delivery">Product Delivery</label>
+                <br>
+
+                <input type="submit" id="submitButton">
+            </form>
+        </div>
+    </div>
+    <div id="content"></div>
 </body>
 </html>
-<script src="../FrontEnd/JS/adminPage.js"></script>
+<script src="./JS/adminPage.js"></script>

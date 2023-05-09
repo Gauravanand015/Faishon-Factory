@@ -15,9 +15,9 @@ cloud.config({
 productRouter.get("/allData",async(req,res)=>{
     try {
         const allData = await ProductModel.find()
-        res.send(allData);
+        res.json(allData);
     } catch (error) {
-        res.send(error)
+        res.json(error)
         console.log(error);
     }
 })
@@ -26,7 +26,7 @@ productRouter.post("/create",async(req,res)=>{
 
     const file = req.files.img;
     const allData = await ProductModel.find()
-    // res.send(`${allData.length}`)
+    // res.json(`${allData.length}`)
     cloud.uploader.upload(file.tempFilePath, async (err, result) => {
         try {
             if(allData.length>=0){
@@ -38,17 +38,17 @@ productRouter.post("/create",async(req,res)=>{
                     Rating:req.body.rating,
                     reviews:req.body.reviews,
                     More:req.body.more,
-                    product_id:+(allData.length+2)
+                    product_id:+(allData.length+5)
             })
                 await data.save()
                 console.log(data)
-                res.send("Created data");
+                res.json({msg:"Created data"});
             }else{
                 console.log(err);
-                res.send("Something Is Wrong !!")
+                res.json("Something Is Wrong !!")
             }
         } catch (error) {
-            res.send("Something is Wrong !!")
+            res.json("Something is Wrong !!")
             console.log(error)
         }
     })
@@ -60,10 +60,10 @@ productRouter.patch("/editnupdate/:product_id",async (req,res)=>{
     const data = req.body
     try {
         const update =  await ProductModel.updateOne({product_id:id},data)
-        res.send("Updated")
+        res.json("Updated")
         console.log(update);
     } catch (error) {
-        res.send(error);
+        res.json(error);
     }
 })
 
@@ -72,10 +72,10 @@ productRouter.delete("/delete/:product_id",async (req,res)=>{
     try {
         const del =  await ProductModel.deleteOne({product_id:id})
         await CartModel.deleteOne({product_id:id})
-        res.send("Deleted")
+        res.json("Deleted")
         console.log(del);
     } catch (error) {
-        res.send(error);
+        res.json(error);
         console.log(error);
     }
 })
