@@ -1,5 +1,5 @@
-let url = "http://localhost:1110/productDescription/product"
-let cartUrl = "http://localhost:1110/cart/getProduct//itemPostatCart/:product_id";
+let url = "https://good-cyan-goat-kilt.cyclic.app/productDescription/product"
+let cartUrl = "https://good-cyan-goat-kilt.cyclic.app/cart/getProduct//itemPostatCart/:product_id";
 let description = document.getElementById("description_container")
 let button = document.querySelector("#addToCart")
 
@@ -70,7 +70,7 @@ function renderData(data){
                 try {
                     var id = elem.product_id
                     console.log(id)
-                    let res = await fetch(`http://localhost:1110/cart/itemPostatCart/${id}`,{
+                    let res = await fetch(`https://good-cyan-goat-kilt.cyclic.app/cart/itemPostatCart/${id}`,{
                         method:"POST",
                         headers:{
                             "Content-type":"application/json",
@@ -103,7 +103,7 @@ function renderData(data){
 
 // async function pro_des(id){
 //     try {
-//         let res = await fetch(`http://localhost:1110/productDescription/product/${id}`)
+//         let res = await fetch(`https://good-cyan-goat-kilt.cyclic.app/productDescription/product/${id}`)
 //         let data  = await res.json()
 //         console.log(data);
 //         let x = localStorage.setItem("pro_des",JSON.stringify(data))

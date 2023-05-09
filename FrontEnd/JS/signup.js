@@ -1,4 +1,4 @@
-let registerUrl = "http://localhost:1110/users/register";
+let registerUrl = "https://good-cyan-goat-kilt.cyclic.app/users/register";
 
 let rname = document.getElementById("username");
 let remail = document.getElementById("registermail");

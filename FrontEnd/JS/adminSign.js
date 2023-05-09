@@ -1,5 +1,5 @@
 
-let LoginUrl = "http://localhost:1110/admin/login"
+let LoginUrl = "https://good-cyan-goat-kilt.cyclic.app/admin/login"
 
 
 document.querySelector("#login").addEventListener("submit", (event) => {

@@ -1,7 +1,7 @@
 let arr = [];
 let Usertoken = sessionStorage.getItem("token");
 async function x() {
-  let url = "http://localhost:1110/product/allData";
+  let url = "https://good-cyan-goat-kilt.cyclic.app//product/allData";
   try {
     let res = await fetch(url, {
       method: "GET",
@@ -103,7 +103,7 @@ function renderData(data) {
 
 async function removeItem(productID) {
   try {
-    let res = await fetch(`http://localhost:1110/product/delete/${productID}`, {
+    let res = await fetch(`https://good-cyan-goat-kilt.cyclic.app/product/delete/${productID}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
@@ -156,7 +156,7 @@ async function addProduct() {
     }
     console.log(obj);
 
-    let data = await fetch("http://localhost:1110/product/create", {
+    let data = await fetch("https://good-cyan-goat-kilt.cyclic.app//product/create", {
       method: "POST",
       headers: {
         "Content-Type": "applicaion/json",

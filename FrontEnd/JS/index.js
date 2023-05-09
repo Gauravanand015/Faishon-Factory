@@ -1,4 +1,4 @@
-let url = "http://localhost:1110/home/getProduct"
+let url = "https://good-cyan-goat-kilt.cyclic.app/home/getProduct"
 let arr = [];
 
 let token =  sessionStorage.getItem("token");
@@ -69,7 +69,7 @@ function renderData(data){
 
 async function pro_des(id){
     try {
-        let res = await fetch(`http://localhost:1110/productDescription/product/${id}`)
+        let res = await fetch(`https://good-cyan-goat-kilt.cyclic.app/productDescription/product/${id}`)
         let data  = await res.json()
         console.log(data)
         localStorage.setItem("pro_des",JSON.stringify(data))

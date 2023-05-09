@@ -4,7 +4,7 @@ let Carttotal = 0;
 let token = sessionStorage.getItem("token")
 async function getDataFromBackend(){
 
-    const data = await fetch(`http://localhost:1110/cart/getCartData`,{
+    const data = await fetch(`https://good-cyan-goat-kilt.cyclic.app/cart/getCartData`,{
         method:"GET",
         headers:{
             "Content-Type" : "application/json",
@@ -124,7 +124,7 @@ function renderData(data){
 async function removeItem(productID){
 
     try {
-        let res = await fetch(`http://localhost:1110/cart/deleteItemfromCart/${productID}`,{
+        let res = await fetch(`https://good-cyan-goat-kilt.cyclic.app/cart/deleteItemfromCart/${productID}`,{
             method:"DELETE",
             headers:{
                 "Content-Type":"application/json",

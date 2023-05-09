@@ -1,5 +1,5 @@
-let LoginUrl = "http://localhost:1110/users/login_user";
-let RegisterUrl = "http://localhost:1110/users/register";
+let LoginUrl = "https://good-cyan-goat-kilt.cyclic.app/users/login_user";
+let RegisterUrl = "https://good-cyan-goat-kilt.cyclic.app/users/register";
 
 document.querySelector("#login").addEventListener("submit", (event) => {
   event.preventDefault();
