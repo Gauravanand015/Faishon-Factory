@@ -46,7 +46,7 @@ function renderData(data){
 
         let title = document.createElement("div");
         title.setAttribute("class","title")
-        title.innerText=elem.Title.substring(0,20) +"...";
+        title.innerText = elem.Title && elem.Title.length > 20 ? elem.Title.substring(0, 20) + "..." : elem.Title;
 
         let price = document.createElement("div");
         price.setAttribute("class","price")
@@ -80,26 +80,64 @@ async function pro_des(id){
 }
 
 
-function search(){
-    console.log(arr)
+// function search(){
+//     console.log(arr)
+//     let ser = document.getElementById("search").value;
+//     let newData = arr.filter(function(elem){
+//         return elem.Title.toLowerCase().includes(ser.toLocaleLowerCase())
+//     });
+//     renderData(newData)
+// }
+
+
+function search() {
     let ser = document.getElementById("search").value;
-    let newData = arr.filter(function(elem){
-        return elem.Title.toLowerCase().includes(ser.toLocaleLowerCase())
+    let newData = arr.filter(function(elem) {
+      return elem.Title && elem.Title.toLowerCase().includes(ser.toLowerCase());
     });
-    renderData(newData)
-}
+    document.querySelector(".card-list").innerHTML = ""; // Clear existing results
+    renderData(newData); // Display filtered results
+  }
+
+
+// function sort() {
+//     let sel = document.getElementById("sort").value;
+//     console.log(sel);
+//     if (sel == "LTH") {
+//       arr.sort((a, b) => a.price.slice(1) - b.price.slice(1));
+//       document.querySelector(".card-list").innerHTML = ""
+//       renderData(arr);
+//     }
+//     if (sel == "HTL") {
+//       arr.sort((a, b) => b.price.slice(1) - a.price.slice(1));
+//       document.querySelector(".card-list").innerHTML = ""
+//       renderData(arr);
+//     }
+//   }
 
 function sort() {
     let sel = document.getElementById("sort").value;
     console.log(sel);
     if (sel == "LTH") {
-      arr.sort((a, b) => a.price.slice(1) - b.price.slice(1));
-      document.querySelector(".card-list").innerHTML = ""
+      arr.sort((a, b) => {
+        if (a.price && b.price) {
+          return a.price.slice(1) - b.price.slice(1);
+        } else {
+          return 0;
+        }
+      });
+      document.querySelector(".card-list").innerHTML = "";
       renderData(arr);
     }
     if (sel == "HTL") {
-      arr.sort((a, b) => b.price.slice(1) - a.price.slice(1));
-      document.querySelector(".card-list").innerHTML = ""
+      arr.sort((a, b) => {
+        if (a.price && b.price) {
+          return b.price.slice(1) - a.price.slice(1);
+        } else {
+          return 0;
+        }
+      });
+      document.querySelector(".card-list").innerHTML = "";
       renderData(arr);
     }
   }

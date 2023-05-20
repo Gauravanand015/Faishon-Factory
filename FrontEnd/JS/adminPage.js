@@ -1,7 +1,7 @@
 let arr = [];
 let Usertoken = sessionStorage.getItem("token");
 async function x() {
-  let url = "https://good-cyan-goat-kilt.cyclic.app//product/allData";
+  let url = "https://good-cyan-goat-kilt.cyclic.app/product/allData";
   try {
     let res = await fetch(url, {
       method: "GET",
@@ -124,7 +124,6 @@ const submitButton = document.getElementById("submitButton");
 
 // Add an event listener to the submit button
 submitButton.addEventListener("click", function (event) {
-  // Prevent the default form submission
   event.preventDefault();
   addProduct();
 });
@@ -156,7 +155,7 @@ async function addProduct() {
     }
     console.log(obj);
 
-    let data = await fetch("https://good-cyan-goat-kilt.cyclic.app//product/create", {
+    let data = await fetch("http://localhost:1110/product/create", {
       method: "POST",
       headers: {
         "Content-Type": "applicaion/json",
@@ -166,7 +165,7 @@ async function addProduct() {
     });
 
     let res = await data.json();
-    if (res.msg == "Created data") {
+    if (res.msg == "Hello") {
       alert("Data Posted");
       window.location.reload();
     } else {
@@ -176,3 +175,54 @@ async function addProduct() {
     console.log(error);
   }
 }
+
+
+// async function addProduct(event) {
+//   event.preventDefault(); // add this line to prevent page refresh
+
+//   const fileUpload = document.getElementById("fileUpload").files[0].name;
+//   const productTitle = document.getElementById("product_title");
+//   const productPrice = document.getElementById("product_price");
+//   const productRating = document.getElementById("product_rating");
+//   const productDelivery = document.getElementById("product_delivery");
+
+//   try {
+//     let obj = {
+//       img: fileUpload,
+//       title: productTitle.value,
+//       price: productPrice.value,
+//       rating: productRating.value,
+//       delivery: productDelivery.value,
+//     };
+//     if (
+//       obj.img == "" ||
+//       obj.title == "" ||
+//       obj.price == "" ||
+//       obj.rating == "" ||
+//       obj.delivery == ""
+//     ) {
+//       alert("flii details");
+//       return;
+//     }
+//     console.log(obj);
+
+//     let data = await fetch("http://localhost:1110/product/create", {
+//       method: "POST",
+//       headers: {
+//         "Content-Type": "multipart/form-data",
+//         authorization: Admintoken,
+//       },
+//       body: JSON.stringify(obj),
+//     });
+
+//     let res = await data.json();
+//     if (res.msg == "Created data") {
+//       alert("Data Posted");
+//       window.location.reload();
+//     } else {
+//       alert("Somthing Went Wrong While Adding Product");
+//     }
+//   } catch (error) {
+//     console.log(error);
+//   }
+// }

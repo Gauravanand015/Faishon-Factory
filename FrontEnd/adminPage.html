@@ -45,8 +45,8 @@
     <h1 id="mh">Manage  All Product</h1>
     <div id="main">
         <div id="allInput"> <h3>Add Products</h3>
-            <form action="#" id="form">
-                <input style="border: 1px solid black;" type="file" id="fileUpload" placeholder="upload file" required>
+            <form action="/Uploads" id="form" method="POST" , enctype="multipart/form-data">
+                <input style="border: 1px solid black;" type="file" id="fileUpload" name="productImage" placeholder="upload file" required>
                 <label for="fileUpload">Upload File</label>
                 <br>
                 <input type="text" id="product_title" placeholder="enter title name" required>

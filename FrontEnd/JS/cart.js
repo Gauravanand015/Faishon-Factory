@@ -12,7 +12,7 @@ async function getDataFromBackend(){
         }
     });
     const res =  await data.json();
-    console.log("response",res);
+    // console.log("response",res);
     // if(sessionStorage.getItem("token") == )
     sessionStorage.setItem("add",res.length)
     renderData(res)

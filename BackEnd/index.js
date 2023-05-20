@@ -15,7 +15,7 @@ const app = exp();
 app.use(cors())
 
 app.use(exp.json());
-
+app.use(exp.urlencoded({extended:false}))
 app.use(fileUpload({
     useTempFiles:true
 }))
