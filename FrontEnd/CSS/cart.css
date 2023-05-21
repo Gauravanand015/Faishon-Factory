@@ -142,12 +142,12 @@ button {
 }
 .increment{
   border: 1px solid black;
-  float:right;
+  /* float:right; */
   cursor: pointer;
 }
 .decrement{
   border: 1px solid black;
-  float: right;
+  /* float: right; */
   cursor: pointer;
 }
 .remove{
@@ -157,4 +157,8 @@ button {
 .sub{
   border: 1px solid #f43397;
   height: auto;
+}
+.add_minus{
+  display: flex;
+  justify-content: space-between;
 }

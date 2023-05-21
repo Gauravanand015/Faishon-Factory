@@ -37,5 +37,5 @@ app.listen(process.env.Port,async ()=>{
     } catch (error) {
         console.log(error)
     }
-    console.log("Connedted to server");
+    console.log("Connected to server");
 })
