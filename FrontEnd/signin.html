@@ -3,11 +3,79 @@
 <head>
   <meta charset="UTF-8">
   <title>fashionfactory Sign up/Login Form</title>
+	<link rel="stylesheet" href="./CSS/index.css">
   <link rel="stylesheet" href="./CSS/signin.css">
 <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 <body>
+
+	<section class="navbar">
+        <div class="uppernav">
+            <a href="./index.html"><img src="./image/Logo-1.png"
+                    alt="logo" class="logo" /></a>
+            <div class="navSearch">
+                 <img src="https://i.postimg.cc/90c6jfMm/search-interface-symbol.png" alt="search"
+                    class="NavSearchIcon" />
+                <!-- <input type="text" id="keyword" class="searchContainer"
+                    placeholder="Try Saree,Kurthi or Seach by Product Code" onkeypress="handleKeyPress(event)" />  -->
+                    
+                    <input id="search" class="searchContainer" oninput="search()" type="text" placeholder="Try Saree,Kurthi or Seach by Product Code">
+
+            </div>
+            <div class="navRightSec">
+                <div class="navAppPromo">
+                    <img src="https://i.postimg.cc/sXqr2Fz4/smartphone.png" alt="app" class="navAppIcon" />
+                    <span id="tagDwn">Download App</span>
+                </div>
+                <a href="./adminSign.html"><span class="navSuplier">Admin</span></a>
+                <div class="navProfile" onclick="window.location.href='signin.html'">
+                    <img src="https://i.postimg.cc/wjtLkcVz/user.png" alt="account" class="navAccountIcon" />
+                    <span class="SignUpHover">Profile</span>
+                </div>
+                <div class="navcart" onclick="window.location.href='CartPage.html'">
+                    <img src="https://i.postimg.cc/sXBgkwMf/bag.png" alt="cart" class="cartIcon" />
+                    <span class="SignUpHover" onclick="window.location.href='CartPage.html'">Cart</span>
+                </div>
+                <!-- <div id="cart-item-counter">0</div> -->
+            </div>
+        </div>
+        <!-- <div class="bottomNav">
+            <div class="nav-menu">
+                <ul>
+                    <li class="dropdown" onclick="window.location.href='#'">View All</li>
+                    <li class="dropdown" onclick="window.location.href='#'">Women Western
+                        <div class="submenu">
+                            <div class="subCat">
+                                <span class="catHeading">Topwear</span>
+                                <span>Dresses</span>
+                                <span>Tops</span>
+                                <span>Sweaters</span>
+                                <span>Jumpsuits</span>
+                            </div>
+                            <div class="subCat" style="margin-left: 1em;">
+                                <span class="catHeading">Bottomwear</span>
+                                <span>Jeans</span>
+                                <span>Jeggings</span>
+                                <span>Palazzos</span>
+                                <span>Shorts</span>
+                                <span>Skirts</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li onclick="window.location.href='#'">Jewellery & Accessories</li>
+                    <li onclick="window.location.href='#'">Men</li>
+                    <li>Beauty & Health</li>
+                    <li>Bath & Body</li>
+                    <li>Bags & Footwear</li>
+                    <li>Home & Kitchen</li>
+                    <li>Kids</li>
+                    <li>Electronics</li>
+                </ul>
+            </div>
+        </div> -->
+    </section>
+
 	<div class="main">  	
 		<input type="checkbox" id="chk" aria-hidden="true">
 
