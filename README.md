@@ -14,6 +14,8 @@ Meesho's website demonstrates the company's dedication to providing a seamless a
 * Jsonwebtoken
 # Features
 * Login and signup functionality only for user
+* Seacrh Funtionality
+* You Can Sort the procducts by price
 * Navbar for easy navigation between pages
 * At home page itself you can all the products and start shoppping
 * Cart Page
