@@ -6,7 +6,7 @@ Meesho's website demonstrates the company's dedication to providing a seamless a
 * CSS
 * JavaScript
 ### For Backend
-* Node.js
+* NodeJs
 * Express.js
 * MongoDB
 * Mongoose
