@@ -396,3 +396,14 @@ h1 span {
     padding: 8px 25px;
     border: none;
 }
+#footer{
+  margin: auto;
+}
+.block-1 p{
+  margin-top: -10px;
+  margin-bottom: 20px;
+}
+
+.block-2 a{
+  padding-bottom: 10px;
+}
