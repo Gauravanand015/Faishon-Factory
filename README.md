@@ -17,7 +17,7 @@ Meesho's website demonstrates the company's dedication to providing a seamless a
 * Seacrh Funtionality
 * You Can Sort the procducts by price
 * Navbar for easy navigation between pages
-* At home page itself you can all the products and start shoppping
+* At home page itself you can see all the products and start shoppping
 * Cart Page
 * Checkout Page
 * Payment Page
