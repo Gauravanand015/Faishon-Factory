@@ -1,4 +1,4 @@
-# Fashion Factory(Clone of Meecho)
+# Fashion Factory(Clone of Meesho)
 Meesho's website demonstrates the company's dedication to providing a seamless and efficient experience for both resellers and customers. The platform's emphasis on transparency, with clear pricing and detailed product information, fosters trust and credibility. The website's responsive design ensures a consistent experience across different devices, enabling users to access Meesho's services anytime, anywhere.
 # Technologies Used
 ### For Frontend
