@@ -14,13 +14,14 @@ Meesho's website demonstrates the company's dedication to providing a seamless a
 * Jsonwebtoken
 # Features
 * Login and signup functionality only for user
-* Seacrh Funtionality
+* Seacrh Functionality
 * You Can Sort the procducts by price
 * Navbar for easy navigation between pages
 * At home page itself you can see all the products and start shoppping
 * Cart Page
 * Checkout Page
 * Payment Page
+* Checkbox Functionality 
 # Some Screenshots Of The Project
 ### Homepage
 ![fashionfactory](https://github.com/Gauravanand015/panoramic-error-8656/assets/114743182/cc8c19db-4a3d-498f-bd5b-af8b2f118cbb)
